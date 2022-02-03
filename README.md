@@ -14,6 +14,8 @@ ExPI_ROOT_PATH
     |-- a-frame1
         |-- IMG
             |-- cam-012
+                |-- img-000050.jpg 
+                `-- ...
             |-- cam-020
             |-- cam-030
             `-- cam-038
