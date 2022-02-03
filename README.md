@@ -8,7 +8,7 @@ A toolbox for ExPI dataset.
 ### Preparing data
 Please download ExPI dataset, and extract images from .mp4 to .jpg (by ffmpeg for example), put the images in IMG/, to have:
 
-'''
+```
 ExPI_ROOT_PATH
 |-- acro1
     |-- a-frame1
@@ -24,7 +24,7 @@ ExPI_ROOT_PATH
     `-- ...
 `-- acro2
     `-- ...
-
+```
 
 In the full dataset of ExPI, we have 68 different camera views. Here we just include 4 views (the 4 best views for 3D pose estimation by RGB images):
 
