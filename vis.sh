@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# sh vis.sh acro2b a-frame1 30 '2d'
-
+root_folder='./ExPI/' #set your path
 actor=$1
 action=$2
 camera=$3
 vis=$4
 
 # vis in 2d/3d/2d3d
-python vis_mocap.py --actor_name $actor  --action_name $action --camera_name $camera --vis $vis
+python vis_mocap.py --root_folder $root_folder --actor_name $actor  --action_name $action --camera_name $camera --vis $vis
 
 # jpg2mp4
 cd out

@@ -25,7 +25,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='vis 3D mocap for acro dataset')
     parser.add_argument('--root_folder',
             help = 'path to your data',
-            default = '/mnt/beegfs/perception/wguo/acro_dataset/data/',
+            default = './ExPI',
             type = str)
     parser.add_argument('--actor_name',
             help = 'acro1 or acro2',
@@ -98,10 +98,7 @@ def main():
             img_3d = cv2.copyMakeBorder(img_3d, int((x_2d-x_3d*2)/2), int((x_2d-x_3d*2)/2), int((y_2d-y_3d*2)/2), int((x_2d-x_3d*2)/2), cv2.BORDER_CONSTANT,value=[255,255,255])
             img_3d = cv2.resize(img_3d, (x_2d,y_2d))
             img_2d3d = cv2.hconcat([img_2d,img_3d])
-            if use_gt_new:
-                save_path = './out/' + actor_name+'_'+ action_name + '_2d3d_cam' + str(args.camera_name) + '_cleaned_' + img_name
-            else:
-                save_path = './out/' + actor_name+'_'+ action_name + '_2d3d_cam' + str(args.camera_name) + '_old_' + img_name
+            save_path = './out/' + actor_name+'_'+ action_name + '_2d3d_cam' + str(args.camera_name) + '_cleaned_' + img_name
             cv2.imwrite(save_path, img_2d3d)
 
 if __name__ == '__main__':

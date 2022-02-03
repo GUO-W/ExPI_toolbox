@@ -24,7 +24,7 @@ ExPI_ROOT_PATH
     `-- ...
 `-- acro2
     `-- ...
-'''
+
 
 In the full dataset of ExPI, we have 68 different camera views. Here we just include 4 views (the 4 best views for 3D pose estimation by RGB images):
 
@@ -42,19 +42,20 @@ For detailed information about the dataset, please see:
 When processing monocular RGB pose estimation, we suggest that you take all these 4 views into consideration (so you will enlarge the dataset by x4 times).
 
 For writing the dataloader, please refer to [code](https://github.com/GUO-W/MultiMotion), which is a repo for 3D motion prediction (where only mocap 3D data is used) if needed.
-
 For train/test split protocols, please refer to [paper](https://arxiv.org/abs/2105.08825) if needed.
 
 
 ---
 ### Quick Start 
-This repo contains codes for data reading/ 2D3Dprojection / 2D3D visualisation.
+This repo contains functions for data reading/ 2D3Dprojection / 2D3D visualisation / matching the images with 3D annotations.
 
-You could use the repo for 2d/3d visualization by simply running vis.sh.
+You could use the repo for 2d/3d visualization (image/video) by simply running vis.sh:
+* 2d: visualize RGB along with 2D pose projection.
+* 3d: visualize 3D skeletons.
+* 2d3d: visualize RGB along with 2D pose projection/ corresponding 3D skeletons at the same time.
+Example: sh vis.sh acro2 a-frame1 30 '2d3d'
 
-For 2D/3D projection, please read the related functions in utils.py.
-
-The visualization result you get would be something like in this [video](https://team.inria.fr/robotlearn/multi-person-extreme-motion-prediction/).
+The 2d/3d visualization result you get would be something like in this [video](https://team.inria.fr/robotlearn/multi-person-extreme-motion-prediction/).
 
 ---
 ### Citing
