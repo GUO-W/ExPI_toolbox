@@ -1,6 +1,6 @@
 #!/bin/bash
 
-root_folder='./ExPI/' #set your path
+root_folder= #'./ExPI/' ## set your path
 actor=$1
 action=$2
 camera=$3

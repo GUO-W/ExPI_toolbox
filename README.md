@@ -49,13 +49,17 @@ For train/test split protocols, please refer to [paper](https://arxiv.org/abs/21
 ### Quick Start 
 This repo contains functions for data reading/ 2D3Dprojection / 2D3D visualisation / matching the images with 3D annotations.
 
-You could use the repo for 2d/3d visualization (image/video) by simply running vis.sh:
+You could use the repo for 2d/3d visualization (image/video) by simply running vis.sh
+
+Example: sh vis.sh acro2 a-frame1 30 '2d3d'
+
+Result will be saved in ./out.
+
+Different visualisation options:
 * 2d: visualize RGB along with 2D pose projection.
 * 3d: visualize 3D skeletons.
 * 2d3d: visualize RGB along with 2D pose projection/ corresponding 3D skeletons at the same time.
-Example: sh vis.sh acro2 a-frame1 30 '2d3d'
 
-The 2d/3d visualization result you get would be something like in this [video](https://team.inria.fr/robotlearn/multi-person-extreme-motion-prediction/).
 
 ---
 ### Citing
